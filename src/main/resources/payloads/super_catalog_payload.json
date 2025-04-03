@@ -1,0 +1,28 @@
+{
+  "inspectionType": "CATALOG",
+  "data": {
+    "action": "checkpoints",
+    "checkpoints": {
+      "AC + AC Unit": {
+        "additional": false,
+        "choices": [],
+        "images": [
+          {
+            "label": "8afe3ace-c9f9-4b1f-8085-32228655559a.jpg",
+            "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171601/CATALOG/AC%20%2B%20AC%20Unit/8afe3ace-c9f9-4b1f-8085-32228655559a.jpg.jpg",
+            "updated": true
+          }
+        ],
+        "noImperfectionChoices": [
+          "OK / No Imperfection"
+        ],
+        "prepopulated": false,
+        "refurbishmentChoices": [],
+        "videos": [],
+        "additionalInfo": [],
+        "comment": "",
+        "purchaseConditions": []
+      }
+    }
+  }
+}
