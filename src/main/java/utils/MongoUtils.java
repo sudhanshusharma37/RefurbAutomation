@@ -1,6 +1,7 @@
 package utils;
 
 import com.mongodb.client.*;
+import config.ConfigReader;
 import org.bson.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +12,7 @@ import java.util.List;
 public class MongoUtils {
     private static final Logger log = LoggerFactory.getLogger(MongoUtils.class);
 
-    public static List<String> getJSONRequests(String key, String value) {
+    public static List<String> getJSONRequests(String key, String value, String CollectionName) {
         MongoClient mongoClient = null;
         List<String> jsonResponses = new ArrayList<>();
 
@@ -25,7 +26,7 @@ public class MongoUtils {
 
             System.out.println("Connected to MongoDB successfully!");
 
-            MongoCollection<Document> collection = adminDatabase.getCollection("Refurb");
+            MongoCollection<Document> collection = adminDatabase.getCollection(CollectionName);
 
             FindIterable<Document> documents = collection.find(new Document(key, value));
 
@@ -45,12 +46,5 @@ public class MongoUtils {
             }
         }
         return jsonResponses;
-    }
-
-    public static void main(String args[]) {
-        List<String> jsonRequests = getJSONRequests("inspectionType", "CATALOG");
-        for (String json : jsonRequests) {
-            log.info("JSON Request: " + json);
-        }
     }
 }

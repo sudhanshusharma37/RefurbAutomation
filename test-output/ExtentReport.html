@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Apr 3, 2025 12:21:08 pm</span></a>
+<a href="#"><span class="badge badge-primary">Apr 8, 2025 12:02:03 pm</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Validate Inspection Submission - CATALOG With Imperfection</p>
+            <p class="name">Validate Inspection - CATALOG With No Imperfection</p>
             <p class="text-sm">
-              <span>12:21:10 pm</span> / <span>00:00:01:553</span>
+              <span>12:02:05 pm</span> / <span>00:00:00:038</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Validate Inspection Submission - CATALOG With Imperfection</h5>
-<span class='badge badge-success'>04.03.2025 12:21:10 pm</span>
-<span class='badge badge-danger'>04.03.2025 12:21:11 pm</span>
-<span class='badge badge-default'>00:00:01:553</span>
+<h5 class="test-status text-pass">Validate Inspection - CATALOG With No Imperfection</h5>
+<span class='badge badge-success'>04.08.2025 12:02:05 pm</span>
+<span class='badge badge-danger'>04.08.2025 12:02:05 pm</span>
+<span class='badge badge-default'>00:00:00:038</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -104,16 +104,524 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:21:11 pm</td>
+        <td>12:02:05 pm</td>
         <td>
-          API call successful for payload type: CATALOG With Imperfection
+          Inspection API call successful for payload type: CATALOG With No Imperfection
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:21:11 pm</td>
+        <td>12:02:05 pm</td>
         <td>
           Response Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:02:05 pm</td>
+        <td>
+          Response Body: {
+    "id": "634594440123516",
+    "createdBy": {
+        "uid": "0oac6v5n24IrRiP0z1d6",
+        "authType": "SERVICE"
+    },
+    "updatedBy": {
+        "uid": "wsm.sc@cars24.com",
+        "authType": "USER"
+    },
+    "createdAt": "2025-04-08T06:28:26.633+00:00",
+    "updatedAt": "2025-04-08T06:32:04.652+00:00",
+    "surrogateKey": "IN_CAR_10075172014",
+    "appointmentId": "10075172014",
+    "locationCode": "LC_254",
+    "locationType": "SERVICE_CENTER",
+    "vin": "MBJ11JV6104023071",
+    "vehicleType": "CAR",
+    "country": "IN",
+    "schemaVersion": "IN_CAR_CATALOG_V190",
+    "make": "TOYOTA",
+    "model": "FORTUNER",
+    "variant": "3.0 AT 4X2",
+    "registrationNumber": "DL12CD1711",
+    "year": "2013",
+    "fuelType": "Diesel",
+    "data": {
+        "mmv": {
+            
+        },
+        "qualityStandard": {
+            "standardType": "ALPHA",
+            "standardTypeFromGs": "ALPHA",
+            "reasons": [
+                
+            ],
+            "qualityStandardReasonList": [
+                
+            ]
+        },
+        "derivedStatus": "INSPECTED",
+        "diagnosticStatus": "DGN_EMPTY",
+        "inventoryStatus": "STOCK_IN",
+        "previousCheckpointKey": "Engine + Transmission + Engine Oil",
+        "additionalEstimatePDI": false,
+        "checkpoints": {
+            "AC + AC Unit": {
+                "choices": [
+                    {
+                        "choice": "Rear defogger not working",
+                        "info": "Only if available in the Varient",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "YELLOW",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Replace Heater Core",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "f789b929-df64-43b2-b657-5d5f9546326a.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/AC%20%2B%20AC%20Unit/f789b929-df64-43b2-b657-5d5f9546326a.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:29:03.394+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "comment": "",
+                "revision": 0,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:29:03.394+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "choices": [
+                    {
+                        "choice": "Glass broken",
+                        "info": "Major broken",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "RED",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Repair Wiring",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "7e2b2ed7-cd13-4f02-ad9c-e8a3ae16a494.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Electrical%20%2B%20Interior%20%2B%20Feature%20%2B%20Instrument%20Cluster/7e2b2ed7-cd13-4f02-ad9c-e8a3ae16a494.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:29:00.329+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    {
+                        "choice": [
+                            "10"
+                        ],
+                        "key": "odometerReading"
+                    }
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 0,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:29:00.329+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Engine + Transmission + Engine Oil": {
+                "choices": [
+                    
+                ],
+                "noImperfectionChoices": [
+                    "OK / No Imperfection"
+                ],
+                "refurbishmentChoices": [
+                    
+                ],
+                "images": [
+                    {
+                        "label": "a68b6577-60af-418e-a96a-f29025dabbb4.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/qa/inspection/IN_CAR_10075171689/CATALOG/Engine%20%2B%20Transmission%20%2B%20Engine%20Oil/a68b6577-60af-418e-a96a-f29025dabbb4.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:04.652+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": true,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:04.652+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "NO_IMPERFECTION"
+            },
+            "Exterior + Tyres + Door + RHS Rear": {
+                "choices": [
+                    {
+                        "choice": "Door Handle-Faded",
+                        "info": "Need to check severity",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "GREEN",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    },
+                    {
+                        "choice": "Quarter Glass-Dark Glass Film on windows",
+                        "info": null,
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "YELLOW",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Replace Door",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "c25cd279-c305-433b-b50a-6c628261accd.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Exterior%20%2B%20Tyres%20%2B%20Door%20%2B%20RHS%20Rear/c25cd279-c305-433b-b50a-6c628261accd.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:29:01.336+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 0,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:29:01.336+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Exterior + Tyres + Windshield + Front": {
+                "choices": [
+                    {
+                        "choice": "Wiper arm not working or missing/Wiper Rubber Major Broken",
+                        "info": null,
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "RED",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Lubrication",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "c66ded5a-2e06-4cdd-ac5b-e725a7f21587.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Exterior%20%2B%20Tyres%20%2B%20Windshield%20%2B%20Front/c66ded5a-2e06-4cdd-ac5b-e725a7f21587.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:29:02.369+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 0,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:29:02.369+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            }
+        },
+        "diagnosticEstimates": {
+            
+        },
+        "diagnosticQualityChecks": {
+            "AC + AC Unit": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "NONE",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "NONE",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            }
+        },
+        "assessmentQualityChecks": {
+            
+        },
+        "estimates": {
+            
+        },
+        "qualityChecks": {
+            "AC + AC Unit": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "YELLOW",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "NO_WORK_TO_BE_DONE",
+                "automationTag": "YELLOW",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "RED",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "RED",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Engine + Transmission + Engine Oil": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "GREEN",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "GREEN",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Exterior + Tyres + Door + RHS Rear": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "YELLOW",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "YELLOW",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Exterior + Tyres + Windshield + Front": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "RED",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "RED",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            }
+        },
+        "submittedSuperCategories": {
+            
+        },
+        "superCategoryStatusHolder": {
+            
+        },
+        "basicDetails": {
+            
+        },
+        "looseItems": {
+            
+        },
+        "warrantyDetails": {
+            
+        },
+        "sfCheckpointDetails": {
+            
+        },
+        "attachmentDetails": {
+            
+        },
+        "checklistDetails": {
+            
+        },
+        "specsFeaturesDetails": {
+            
+        },
+        "submittedActions": [
+            
+        ]
+    },
+    "version": 0,
+    "archived": "0",
+    "inspectionStatus": "DONE",
+    "inspectionType": "CATALOG",
+    "inspectionSubType": "FULL",
+    "poolType": "OK",
+    "inspectedBy": {
+        "uid": "wsm.sc@cars24.com",
+        "authType": "USER"
+    },
+    "inspectedAt": "2025-04-08T06:29:03.395+00:00",
+    "invalidated": false,
+    "skipEstimates": false,
+    "skipInspection": false,
+    "stage": 0,
+    "assigned": false,
+    "qualityRejected": false,
+    "assessmentApproved": false,
+    "diagnosticCompleted": true,
+    "reviewType": "NONE",
+    "negoCount": 0,
+    "attributes": {
+        "INSPECTION_NUMBER": 1,
+        "INSPECTION_TAG": "PI",
+        "REFURB_TYPE": "REFURB"
+    },
+    "automationEnabledSchema": false,
+    "indirectCost": 0.0,
+    "flowType": "PAYMENT_FLOW",
+    "allowed": true,
+    "ownerNumber": 1,
+    "loc": {
+        "name": "CARS24- Automovill Technologies Private Limited, Ahmedabad"
+    }
+}
         </td>
       </tr>
   </tbody>
@@ -126,9 +634,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Validate Inspection Submission - CATALOG With Imperfection</p>
+            <p class="name">Validate Inspection - CATALOG With Imperfection</p>
             <p class="text-sm">
-              <span>12:21:11 pm</span> / <span>00:00:01:072</span>
+              <span>12:02:06 pm</span> / <span>00:00:00:018</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -136,10 +644,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Validate Inspection Submission - CATALOG With Imperfection</h5>
-<span class='badge badge-success'>04.03.2025 12:21:11 pm</span>
-<span class='badge badge-danger'>04.03.2025 12:21:12 pm</span>
-<span class='badge badge-default'>00:00:01:072</span>
+<h5 class="test-status text-pass">Validate Inspection - CATALOG With Imperfection</h5>
+<span class='badge badge-success'>04.08.2025 12:02:06 pm</span>
+<span class='badge badge-danger'>04.08.2025 12:02:06 pm</span>
+<span class='badge badge-default'>00:00:00:018</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -151,16 +659,2935 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:21:12 pm</td>
+        <td>12:02:06 pm</td>
         <td>
-          API call successful for payload type: CATALOG With Imperfection
+          Inspection API call successful for payload type: CATALOG With Imperfection
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:21:12 pm</td>
+        <td>12:02:06 pm</td>
         <td>
           Response Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:02:06 pm</td>
+        <td>
+          Response Body: {
+    "id": "634594440123516",
+    "createdBy": {
+        "uid": "0oac6v5n24IrRiP0z1d6",
+        "authType": "SERVICE"
+    },
+    "updatedBy": {
+        "uid": "wsm.sc@cars24.com",
+        "authType": "USER"
+    },
+    "createdAt": "2025-04-08T06:28:26.633+00:00",
+    "updatedAt": "2025-04-08T06:32:05.691+00:00",
+    "surrogateKey": "IN_CAR_10075172014",
+    "appointmentId": "10075172014",
+    "locationCode": "LC_254",
+    "locationType": "SERVICE_CENTER",
+    "vin": "MBJ11JV6104023071",
+    "vehicleType": "CAR",
+    "country": "IN",
+    "schemaVersion": "IN_CAR_CATALOG_V190",
+    "make": "TOYOTA",
+    "model": "FORTUNER",
+    "variant": "3.0 AT 4X2",
+    "registrationNumber": "DL12CD1711",
+    "year": "2013",
+    "fuelType": "Diesel",
+    "data": {
+        "mmv": {
+            
+        },
+        "qualityStandard": {
+            "standardType": "ALPHA",
+            "standardTypeFromGs": "ALPHA",
+            "reasons": [
+                
+            ],
+            "qualityStandardReasonList": [
+                
+            ]
+        },
+        "derivedStatus": "INSPECTED",
+        "diagnosticStatus": "DGN_EMPTY",
+        "inventoryStatus": "STOCK_IN",
+        "previousCheckpointKey": "Electrical + Interior + Feature + Instrument Cluster",
+        "additionalEstimatePDI": false,
+        "checkpoints": {
+            "AC + AC Unit": {
+                "choices": [
+                    {
+                        "choice": "Rear defogger not working",
+                        "info": "Only if available in the Varient",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "YELLOW",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Replace Heater Core",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "f789b929-df64-43b2-b657-5d5f9546326a.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/AC%20%2B%20AC%20Unit/f789b929-df64-43b2-b657-5d5f9546326a.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:29:03.394+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "comment": "",
+                "revision": 0,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:29:03.394+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "choices": [
+                    {
+                        "choice": "Glass broken",
+                        "info": "Major broken",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "RED",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Repair Wiring",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "7e2b2ed7-cd13-4f02-ad9c-e8a3ae16a494.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Electrical%20%2B%20Interior%20%2B%20Feature%20%2B%20Instrument%20Cluster/7e2b2ed7-cd13-4f02-ad9c-e8a3ae16a494.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:05.691+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    {
+                        "choice": [
+                            "10"
+                        ],
+                        "key": "odometerReading"
+                    }
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:05.691+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Engine + Transmission + Engine Oil": {
+                "choices": [
+                    
+                ],
+                "noImperfectionChoices": [
+                    "OK / No Imperfection"
+                ],
+                "refurbishmentChoices": [
+                    
+                ],
+                "images": [
+                    {
+                        "label": "a68b6577-60af-418e-a96a-f29025dabbb4.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/qa/inspection/IN_CAR_10075171689/CATALOG/Engine%20%2B%20Transmission%20%2B%20Engine%20Oil/a68b6577-60af-418e-a96a-f29025dabbb4.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:04.652+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": true,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:04.652+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "NO_IMPERFECTION"
+            },
+            "Exterior + Tyres + Door + RHS Rear": {
+                "choices": [
+                    {
+                        "choice": "Door Handle-Faded",
+                        "info": "Need to check severity",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "GREEN",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    },
+                    {
+                        "choice": "Quarter Glass-Dark Glass Film on windows",
+                        "info": null,
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "YELLOW",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Replace Door",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "c25cd279-c305-433b-b50a-6c628261accd.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Exterior%20%2B%20Tyres%20%2B%20Door%20%2B%20RHS%20Rear/c25cd279-c305-433b-b50a-6c628261accd.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:29:01.336+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 0,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:29:01.336+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Exterior + Tyres + Windshield + Front": {
+                "choices": [
+                    {
+                        "choice": "Wiper arm not working or missing/Wiper Rubber Major Broken",
+                        "info": null,
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "RED",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Lubrication",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "c66ded5a-2e06-4cdd-ac5b-e725a7f21587.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Exterior%20%2B%20Tyres%20%2B%20Windshield%20%2B%20Front/c66ded5a-2e06-4cdd-ac5b-e725a7f21587.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:29:02.369+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 0,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:29:02.369+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            }
+        },
+        "diagnosticEstimates": {
+            
+        },
+        "diagnosticQualityChecks": {
+            "AC + AC Unit": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "NONE",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "NONE",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            }
+        },
+        "assessmentQualityChecks": {
+            
+        },
+        "estimates": {
+            
+        },
+        "qualityChecks": {
+            "AC + AC Unit": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "YELLOW",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "NO_WORK_TO_BE_DONE",
+                "automationTag": "YELLOW",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "RED",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "RED",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Engine + Transmission + Engine Oil": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "GREEN",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "GREEN",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Exterior + Tyres + Door + RHS Rear": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "YELLOW",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "YELLOW",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Exterior + Tyres + Windshield + Front": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "RED",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "RED",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            }
+        },
+        "submittedSuperCategories": {
+            
+        },
+        "superCategoryStatusHolder": {
+            
+        },
+        "basicDetails": {
+            
+        },
+        "looseItems": {
+            
+        },
+        "warrantyDetails": {
+            
+        },
+        "sfCheckpointDetails": {
+            
+        },
+        "attachmentDetails": {
+            
+        },
+        "checklistDetails": {
+            
+        },
+        "specsFeaturesDetails": {
+            
+        },
+        "submittedActions": [
+            
+        ]
+    },
+    "version": 0,
+    "archived": "0",
+    "inspectionStatus": "DONE",
+    "inspectionType": "CATALOG",
+    "inspectionSubType": "FULL",
+    "poolType": "OK",
+    "inspectedBy": {
+        "uid": "wsm.sc@cars24.com",
+        "authType": "USER"
+    },
+    "inspectedAt": "2025-04-08T06:29:03.395+00:00",
+    "invalidated": false,
+    "skipEstimates": false,
+    "skipInspection": false,
+    "stage": 0,
+    "assigned": false,
+    "qualityRejected": false,
+    "assessmentApproved": false,
+    "diagnosticCompleted": true,
+    "reviewType": "NONE",
+    "negoCount": 0,
+    "attributes": {
+        "INSPECTION_NUMBER": 1,
+        "INSPECTION_TAG": "PI",
+        "REFURB_TYPE": "REFURB"
+    },
+    "automationEnabledSchema": false,
+    "indirectCost": 0.0,
+    "flowType": "PAYMENT_FLOW",
+    "allowed": true,
+    "ownerNumber": 1,
+    "loc": {
+        "name": "CARS24- Automovill Technologies Private Limited, Ahmedabad"
+    }
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validate Inspection - CATALOG With Imperfection</p>
+            <p class="text-sm">
+              <span>12:02:07 pm</span> / <span>00:00:00:012</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Validate Inspection - CATALOG With Imperfection</h5>
+<span class='badge badge-success'>04.08.2025 12:02:07 pm</span>
+<span class='badge badge-danger'>04.08.2025 12:02:07 pm</span>
+<span class='badge badge-default'>00:00:00:012</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:02:07 pm</td>
+        <td>
+          Inspection API call successful for payload type: CATALOG With Imperfection
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:02:07 pm</td>
+        <td>
+          Response Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:02:07 pm</td>
+        <td>
+          Response Body: {
+    "id": "634594440123516",
+    "createdBy": {
+        "uid": "0oac6v5n24IrRiP0z1d6",
+        "authType": "SERVICE"
+    },
+    "updatedBy": {
+        "uid": "wsm.sc@cars24.com",
+        "authType": "USER"
+    },
+    "createdAt": "2025-04-08T06:28:26.633+00:00",
+    "updatedAt": "2025-04-08T06:32:06.784+00:00",
+    "surrogateKey": "IN_CAR_10075172014",
+    "appointmentId": "10075172014",
+    "locationCode": "LC_254",
+    "locationType": "SERVICE_CENTER",
+    "vin": "MBJ11JV6104023071",
+    "vehicleType": "CAR",
+    "country": "IN",
+    "schemaVersion": "IN_CAR_CATALOG_V190",
+    "make": "TOYOTA",
+    "model": "FORTUNER",
+    "variant": "3.0 AT 4X2",
+    "registrationNumber": "DL12CD1711",
+    "year": "2013",
+    "fuelType": "Diesel",
+    "data": {
+        "mmv": {
+            
+        },
+        "qualityStandard": {
+            "standardType": "ALPHA",
+            "standardTypeFromGs": "ALPHA",
+            "reasons": [
+                
+            ],
+            "qualityStandardReasonList": [
+                
+            ]
+        },
+        "derivedStatus": "INSPECTED",
+        "diagnosticStatus": "DGN_EMPTY",
+        "inventoryStatus": "STOCK_IN",
+        "previousCheckpointKey": "Exterior + Tyres + Door + RHS Rear",
+        "additionalEstimatePDI": false,
+        "checkpoints": {
+            "AC + AC Unit": {
+                "choices": [
+                    {
+                        "choice": "Rear defogger not working",
+                        "info": "Only if available in the Varient",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "YELLOW",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Replace Heater Core",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "f789b929-df64-43b2-b657-5d5f9546326a.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/AC%20%2B%20AC%20Unit/f789b929-df64-43b2-b657-5d5f9546326a.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:29:03.394+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "comment": "",
+                "revision": 0,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:29:03.394+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "choices": [
+                    {
+                        "choice": "Glass broken",
+                        "info": "Major broken",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "RED",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Repair Wiring",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "7e2b2ed7-cd13-4f02-ad9c-e8a3ae16a494.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Electrical%20%2B%20Interior%20%2B%20Feature%20%2B%20Instrument%20Cluster/7e2b2ed7-cd13-4f02-ad9c-e8a3ae16a494.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:05.691+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    {
+                        "choice": [
+                            "10"
+                        ],
+                        "key": "odometerReading"
+                    }
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:05.691+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Engine + Transmission + Engine Oil": {
+                "choices": [
+                    
+                ],
+                "noImperfectionChoices": [
+                    "OK / No Imperfection"
+                ],
+                "refurbishmentChoices": [
+                    
+                ],
+                "images": [
+                    {
+                        "label": "a68b6577-60af-418e-a96a-f29025dabbb4.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/qa/inspection/IN_CAR_10075171689/CATALOG/Engine%20%2B%20Transmission%20%2B%20Engine%20Oil/a68b6577-60af-418e-a96a-f29025dabbb4.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:04.652+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": true,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:04.652+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "NO_IMPERFECTION"
+            },
+            "Exterior + Tyres + Door + RHS Rear": {
+                "choices": [
+                    {
+                        "choice": "Door Handle-Faded",
+                        "info": "Need to check severity",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "GREEN",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    },
+                    {
+                        "choice": "Quarter Glass-Dark Glass Film on windows",
+                        "info": null,
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "YELLOW",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Replace Door",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "c25cd279-c305-433b-b50a-6c628261accd.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Exterior%20%2B%20Tyres%20%2B%20Door%20%2B%20RHS%20Rear/c25cd279-c305-433b-b50a-6c628261accd.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:06.785+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:06.785+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Exterior + Tyres + Windshield + Front": {
+                "choices": [
+                    {
+                        "choice": "Wiper arm not working or missing/Wiper Rubber Major Broken",
+                        "info": null,
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "RED",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Lubrication",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "c66ded5a-2e06-4cdd-ac5b-e725a7f21587.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Exterior%20%2B%20Tyres%20%2B%20Windshield%20%2B%20Front/c66ded5a-2e06-4cdd-ac5b-e725a7f21587.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:29:02.369+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 0,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:29:02.369+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            }
+        },
+        "diagnosticEstimates": {
+            
+        },
+        "diagnosticQualityChecks": {
+            "AC + AC Unit": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "NONE",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "NONE",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            }
+        },
+        "assessmentQualityChecks": {
+            
+        },
+        "estimates": {
+            
+        },
+        "qualityChecks": {
+            "AC + AC Unit": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "YELLOW",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "NO_WORK_TO_BE_DONE",
+                "automationTag": "YELLOW",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "RED",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "RED",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Engine + Transmission + Engine Oil": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "GREEN",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "GREEN",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Exterior + Tyres + Door + RHS Rear": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "YELLOW",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "YELLOW",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Exterior + Tyres + Windshield + Front": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "RED",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "RED",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            }
+        },
+        "submittedSuperCategories": {
+            
+        },
+        "superCategoryStatusHolder": {
+            
+        },
+        "basicDetails": {
+            
+        },
+        "looseItems": {
+            
+        },
+        "warrantyDetails": {
+            
+        },
+        "sfCheckpointDetails": {
+            
+        },
+        "attachmentDetails": {
+            
+        },
+        "checklistDetails": {
+            
+        },
+        "specsFeaturesDetails": {
+            
+        },
+        "submittedActions": [
+            
+        ]
+    },
+    "version": 0,
+    "archived": "0",
+    "inspectionStatus": "DONE",
+    "inspectionType": "CATALOG",
+    "inspectionSubType": "FULL",
+    "poolType": "OK",
+    "inspectedBy": {
+        "uid": "wsm.sc@cars24.com",
+        "authType": "USER"
+    },
+    "inspectedAt": "2025-04-08T06:29:03.395+00:00",
+    "invalidated": false,
+    "skipEstimates": false,
+    "skipInspection": false,
+    "stage": 0,
+    "assigned": false,
+    "qualityRejected": false,
+    "assessmentApproved": false,
+    "diagnosticCompleted": true,
+    "reviewType": "NONE",
+    "negoCount": 0,
+    "attributes": {
+        "INSPECTION_NUMBER": 1,
+        "INSPECTION_TAG": "PI",
+        "REFURB_TYPE": "REFURB"
+    },
+    "automationEnabledSchema": false,
+    "indirectCost": 0.0,
+    "flowType": "PAYMENT_FLOW",
+    "allowed": true,
+    "ownerNumber": 1,
+    "loc": {
+        "name": "CARS24- Automovill Technologies Private Limited, Ahmedabad"
+    }
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validate Inspection - CATALOG With Imperfection</p>
+            <p class="text-sm">
+              <span>12:02:08 pm</span> / <span>00:00:00:010</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Validate Inspection - CATALOG With Imperfection</h5>
+<span class='badge badge-success'>04.08.2025 12:02:08 pm</span>
+<span class='badge badge-danger'>04.08.2025 12:02:08 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:02:08 pm</td>
+        <td>
+          Inspection API call successful for payload type: CATALOG With Imperfection
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:02:08 pm</td>
+        <td>
+          Response Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:02:08 pm</td>
+        <td>
+          Response Body: {
+    "id": "634594440123516",
+    "createdBy": {
+        "uid": "0oac6v5n24IrRiP0z1d6",
+        "authType": "SERVICE"
+    },
+    "updatedBy": {
+        "uid": "wsm.sc@cars24.com",
+        "authType": "USER"
+    },
+    "createdAt": "2025-04-08T06:28:26.633+00:00",
+    "updatedAt": "2025-04-08T06:32:07.799+00:00",
+    "surrogateKey": "IN_CAR_10075172014",
+    "appointmentId": "10075172014",
+    "locationCode": "LC_254",
+    "locationType": "SERVICE_CENTER",
+    "vin": "MBJ11JV6104023071",
+    "vehicleType": "CAR",
+    "country": "IN",
+    "schemaVersion": "IN_CAR_CATALOG_V190",
+    "make": "TOYOTA",
+    "model": "FORTUNER",
+    "variant": "3.0 AT 4X2",
+    "registrationNumber": "DL12CD1711",
+    "year": "2013",
+    "fuelType": "Diesel",
+    "data": {
+        "mmv": {
+            
+        },
+        "qualityStandard": {
+            "standardType": "ALPHA",
+            "standardTypeFromGs": "ALPHA",
+            "reasons": [
+                
+            ],
+            "qualityStandardReasonList": [
+                
+            ]
+        },
+        "derivedStatus": "INSPECTED",
+        "diagnosticStatus": "DGN_EMPTY",
+        "inventoryStatus": "STOCK_IN",
+        "previousCheckpointKey": "Exterior + Tyres + Windshield + Front",
+        "additionalEstimatePDI": false,
+        "checkpoints": {
+            "AC + AC Unit": {
+                "choices": [
+                    {
+                        "choice": "Rear defogger not working",
+                        "info": "Only if available in the Varient",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "YELLOW",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Replace Heater Core",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "f789b929-df64-43b2-b657-5d5f9546326a.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/AC%20%2B%20AC%20Unit/f789b929-df64-43b2-b657-5d5f9546326a.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:29:03.394+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "comment": "",
+                "revision": 0,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:29:03.394+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "choices": [
+                    {
+                        "choice": "Glass broken",
+                        "info": "Major broken",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "RED",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Repair Wiring",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "7e2b2ed7-cd13-4f02-ad9c-e8a3ae16a494.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Electrical%20%2B%20Interior%20%2B%20Feature%20%2B%20Instrument%20Cluster/7e2b2ed7-cd13-4f02-ad9c-e8a3ae16a494.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:05.691+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    {
+                        "choice": [
+                            "10"
+                        ],
+                        "key": "odometerReading"
+                    }
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:05.691+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Engine + Transmission + Engine Oil": {
+                "choices": [
+                    
+                ],
+                "noImperfectionChoices": [
+                    "OK / No Imperfection"
+                ],
+                "refurbishmentChoices": [
+                    
+                ],
+                "images": [
+                    {
+                        "label": "a68b6577-60af-418e-a96a-f29025dabbb4.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/qa/inspection/IN_CAR_10075171689/CATALOG/Engine%20%2B%20Transmission%20%2B%20Engine%20Oil/a68b6577-60af-418e-a96a-f29025dabbb4.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:04.652+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": true,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:04.652+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "NO_IMPERFECTION"
+            },
+            "Exterior + Tyres + Door + RHS Rear": {
+                "choices": [
+                    {
+                        "choice": "Door Handle-Faded",
+                        "info": "Need to check severity",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "GREEN",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    },
+                    {
+                        "choice": "Quarter Glass-Dark Glass Film on windows",
+                        "info": null,
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "YELLOW",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Replace Door",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "c25cd279-c305-433b-b50a-6c628261accd.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Exterior%20%2B%20Tyres%20%2B%20Door%20%2B%20RHS%20Rear/c25cd279-c305-433b-b50a-6c628261accd.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:06.785+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:06.785+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Exterior + Tyres + Windshield + Front": {
+                "choices": [
+                    {
+                        "choice": "Wiper arm not working or missing/Wiper Rubber Major Broken",
+                        "info": null,
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "RED",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Lubrication",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "c66ded5a-2e06-4cdd-ac5b-e725a7f21587.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Exterior%20%2B%20Tyres%20%2B%20Windshield%20%2B%20Front/c66ded5a-2e06-4cdd-ac5b-e725a7f21587.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:07.800+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:07.800+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            }
+        },
+        "diagnosticEstimates": {
+            
+        },
+        "diagnosticQualityChecks": {
+            "AC + AC Unit": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "NONE",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "NONE",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            }
+        },
+        "assessmentQualityChecks": {
+            
+        },
+        "estimates": {
+            
+        },
+        "qualityChecks": {
+            "AC + AC Unit": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "YELLOW",
+                "images": [
+                    
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "NO_WORK_TO_BE_DONE",
+                "automationTag": "YELLOW",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "RED",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "RED",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Engine + Transmission + Engine Oil": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "GREEN",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "GREEN",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Exterior + Tyres + Door + RHS Rear": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "YELLOW",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "YELLOW",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Exterior + Tyres + Windshield + Front": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "RED",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "RED",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            }
+        },
+        "submittedSuperCategories": {
+            
+        },
+        "superCategoryStatusHolder": {
+            
+        },
+        "basicDetails": {
+            
+        },
+        "looseItems": {
+            
+        },
+        "warrantyDetails": {
+            
+        },
+        "sfCheckpointDetails": {
+            
+        },
+        "attachmentDetails": {
+            
+        },
+        "checklistDetails": {
+            
+        },
+        "specsFeaturesDetails": {
+            
+        },
+        "submittedActions": [
+            
+        ]
+    },
+    "version": 0,
+    "archived": "0",
+    "inspectionStatus": "DONE",
+    "inspectionType": "CATALOG",
+    "inspectionSubType": "FULL",
+    "poolType": "OK",
+    "inspectedBy": {
+        "uid": "wsm.sc@cars24.com",
+        "authType": "USER"
+    },
+    "inspectedAt": "2025-04-08T06:29:03.395+00:00",
+    "invalidated": false,
+    "skipEstimates": false,
+    "skipInspection": false,
+    "stage": 0,
+    "assigned": false,
+    "qualityRejected": false,
+    "assessmentApproved": false,
+    "diagnosticCompleted": true,
+    "reviewType": "NONE",
+    "negoCount": 0,
+    "attributes": {
+        "INSPECTION_NUMBER": 1,
+        "INSPECTION_TAG": "PI",
+        "REFURB_TYPE": "REFURB"
+    },
+    "automationEnabledSchema": false,
+    "indirectCost": 0.0,
+    "flowType": "PAYMENT_FLOW",
+    "allowed": true,
+    "ownerNumber": 1,
+    "loc": {
+        "name": "CARS24- Automovill Technologies Private Limited, Ahmedabad"
+    }
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validate Inspection - CATALOG With Imperfection</p>
+            <p class="text-sm">
+              <span>12:02:09 pm</span> / <span>00:00:00:010</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Validate Inspection - CATALOG With Imperfection</h5>
+<span class='badge badge-success'>04.08.2025 12:02:09 pm</span>
+<span class='badge badge-danger'>04.08.2025 12:02:09 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:02:09 pm</td>
+        <td>
+          Inspection API call successful for payload type: CATALOG With Imperfection
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:02:09 pm</td>
+        <td>
+          Response Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:02:09 pm</td>
+        <td>
+          Response Body: {
+    "id": "634594440123516",
+    "createdBy": {
+        "uid": "0oac6v5n24IrRiP0z1d6",
+        "authType": "SERVICE"
+    },
+    "updatedBy": {
+        "uid": "wsm.sc@cars24.com",
+        "authType": "USER"
+    },
+    "createdAt": "2025-04-08T06:28:26.633+00:00",
+    "updatedAt": "2025-04-08T06:32:08.861+00:00",
+    "surrogateKey": "IN_CAR_10075172014",
+    "appointmentId": "10075172014",
+    "locationCode": "LC_254",
+    "locationType": "SERVICE_CENTER",
+    "vin": "MBJ11JV6104023071",
+    "vehicleType": "CAR",
+    "country": "IN",
+    "schemaVersion": "IN_CAR_CATALOG_V190",
+    "make": "TOYOTA",
+    "model": "FORTUNER",
+    "variant": "3.0 AT 4X2",
+    "registrationNumber": "DL12CD1711",
+    "year": "2013",
+    "fuelType": "Diesel",
+    "data": {
+        "mmv": {
+            
+        },
+        "qualityStandard": {
+            "standardType": "ALPHA",
+            "standardTypeFromGs": "ALPHA",
+            "reasons": [
+                
+            ],
+            "qualityStandardReasonList": [
+                
+            ]
+        },
+        "derivedStatus": "INSPECTED",
+        "diagnosticStatus": "DGN_EMPTY",
+        "inventoryStatus": "STOCK_IN",
+        "previousCheckpointKey": "AC + AC Unit",
+        "additionalEstimatePDI": false,
+        "checkpoints": {
+            "AC + AC Unit": {
+                "choices": [
+                    {
+                        "choice": "Rear defogger not working",
+                        "info": "Only if available in the Varient",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "YELLOW",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Replace Heater Core",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "f789b929-df64-43b2-b657-5d5f9546326a.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/AC%20%2B%20AC%20Unit/f789b929-df64-43b2-b657-5d5f9546326a.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:08.862+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "comment": "",
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:08.862+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "choices": [
+                    {
+                        "choice": "Glass broken",
+                        "info": "Major broken",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "RED",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Repair Wiring",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "7e2b2ed7-cd13-4f02-ad9c-e8a3ae16a494.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Electrical%20%2B%20Interior%20%2B%20Feature%20%2B%20Instrument%20Cluster/7e2b2ed7-cd13-4f02-ad9c-e8a3ae16a494.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:05.691+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    {
+                        "choice": [
+                            "10"
+                        ],
+                        "key": "odometerReading"
+                    }
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:05.691+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Engine + Transmission + Engine Oil": {
+                "choices": [
+                    
+                ],
+                "noImperfectionChoices": [
+                    "OK / No Imperfection"
+                ],
+                "refurbishmentChoices": [
+                    
+                ],
+                "images": [
+                    {
+                        "label": "a68b6577-60af-418e-a96a-f29025dabbb4.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/qa/inspection/IN_CAR_10075171689/CATALOG/Engine%20%2B%20Transmission%20%2B%20Engine%20Oil/a68b6577-60af-418e-a96a-f29025dabbb4.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:04.652+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": true,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:04.652+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "NO_IMPERFECTION"
+            },
+            "Exterior + Tyres + Door + RHS Rear": {
+                "choices": [
+                    {
+                        "choice": "Door Handle-Faded",
+                        "info": "Need to check severity",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "GREEN",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    },
+                    {
+                        "choice": "Quarter Glass-Dark Glass Film on windows",
+                        "info": null,
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "YELLOW",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Replace Door",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "c25cd279-c305-433b-b50a-6c628261accd.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Exterior%20%2B%20Tyres%20%2B%20Door%20%2B%20RHS%20Rear/c25cd279-c305-433b-b50a-6c628261accd.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:06.785+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:06.785+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Exterior + Tyres + Windshield + Front": {
+                "choices": [
+                    {
+                        "choice": "Wiper arm not working or missing/Wiper Rubber Major Broken",
+                        "info": null,
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "RED",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Lubrication",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "c66ded5a-2e06-4cdd-ac5b-e725a7f21587.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Exterior%20%2B%20Tyres%20%2B%20Windshield%20%2B%20Front/c66ded5a-2e06-4cdd-ac5b-e725a7f21587.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:07.800+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:07.800+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            }
+        },
+        "diagnosticEstimates": {
+            
+        },
+        "diagnosticQualityChecks": {
+            "AC + AC Unit": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "NONE",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "NONE",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            }
+        },
+        "assessmentQualityChecks": {
+            
+        },
+        "estimates": {
+            
+        },
+        "qualityChecks": {
+            "AC + AC Unit": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "YELLOW",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "NO_WORK_TO_BE_DONE",
+                "automationTag": "YELLOW",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "RED",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "RED",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Engine + Transmission + Engine Oil": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "GREEN",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "GREEN",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Exterior + Tyres + Door + RHS Rear": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "YELLOW",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "YELLOW",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Exterior + Tyres + Windshield + Front": {
+                "status": "PENDING",
+                "reason": "OK",
+                "tag": "RED",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "RED",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            }
+        },
+        "submittedSuperCategories": {
+            
+        },
+        "superCategoryStatusHolder": {
+            
+        },
+        "basicDetails": {
+            
+        },
+        "looseItems": {
+            
+        },
+        "warrantyDetails": {
+            
+        },
+        "sfCheckpointDetails": {
+            
+        },
+        "attachmentDetails": {
+            
+        },
+        "checklistDetails": {
+            
+        },
+        "specsFeaturesDetails": {
+            
+        },
+        "submittedActions": [
+            
+        ]
+    },
+    "version": 0,
+    "archived": "0",
+    "inspectionStatus": "DONE",
+    "inspectionType": "CATALOG",
+    "inspectionSubType": "FULL",
+    "poolType": "OK",
+    "inspectedBy": {
+        "uid": "wsm.sc@cars24.com",
+        "authType": "USER"
+    },
+    "inspectedAt": "2025-04-08T06:29:03.395+00:00",
+    "invalidated": false,
+    "skipEstimates": false,
+    "skipInspection": false,
+    "stage": 0,
+    "assigned": false,
+    "qualityRejected": false,
+    "assessmentApproved": false,
+    "diagnosticCompleted": true,
+    "reviewType": "NONE",
+    "negoCount": 0,
+    "attributes": {
+        "INSPECTION_NUMBER": 1,
+        "INSPECTION_TAG": "PI",
+        "REFURB_TYPE": "REFURB"
+    },
+    "automationEnabledSchema": false,
+    "indirectCost": 0.0,
+    "flowType": "PAYMENT_FLOW",
+    "allowed": true,
+    "ownerNumber": 1,
+    "loc": {
+        "name": "CARS24- Automovill Technologies Private Limited, Ahmedabad"
+    }
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Check Inspection Status</p>
+            <p class="text-sm">
+              <span>12:02:09 pm</span> / <span>00:00:00:179</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Check Inspection Status</h5>
+<span class='badge badge-success'>04.08.2025 12:02:09 pm</span>
+<span class='badge badge-danger'>04.08.2025 12:02:09 pm</span>
+<span class='badge badge-default'>00:00:00:179</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:02:09 pm</td>
+        <td>
+          Inspection status is 'INSPECTED'.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validate Estimation - CATALOG for Estimation</p>
+            <p class="text-sm">
+              <span>12:02:11 pm</span> / <span>00:00:00:014</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Validate Estimation - CATALOG for Estimation</h5>
+<span class='badge badge-success'>04.08.2025 12:02:11 pm</span>
+<span class='badge badge-danger'>04.08.2025 12:02:11 pm</span>
+<span class='badge badge-default'>00:00:00:014</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:02:11 pm</td>
+        <td>
+          Estimation API call successful for payload type: CATALOG for Estimation
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:02:11 pm</td>
+        <td>
+          Response Status Code: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:02:11 pm</td>
+        <td>
+          Response Body: {
+    "id": "634594440123516",
+    "createdBy": {
+        "uid": "0oac6v5n24IrRiP0z1d6",
+        "authType": "SERVICE"
+    },
+    "updatedBy": {
+        "uid": "wsm.sc@cars24.com",
+        "authType": "USER"
+    },
+    "createdAt": "2025-04-08T06:28:26.633+00:00",
+    "updatedAt": "2025-04-08T06:32:10.530+00:00",
+    "surrogateKey": "IN_CAR_10075172014",
+    "appointmentId": "10075172014",
+    "locationCode": "LC_254",
+    "locationType": "SERVICE_CENTER",
+    "vin": "MBJ11JV6104023071",
+    "vehicleType": "CAR",
+    "country": "IN",
+    "schemaVersion": "IN_CAR_CATALOG_V190",
+    "make": "TOYOTA",
+    "model": "FORTUNER",
+    "variant": "3.0 AT 4X2",
+    "registrationNumber": "DL12CD1711",
+    "year": "2013",
+    "fuelType": "Diesel",
+    "data": {
+        "mmv": {
+            
+        },
+        "qualityStandard": {
+            "standardType": "ALPHA",
+            "standardTypeFromGs": "ALPHA",
+            "reasons": [
+                
+            ],
+            "qualityStandardReasonList": [
+                
+            ]
+        },
+        "derivedStatus": "ESTIMATED",
+        "diagnosticStatus": "DGN_EMPTY",
+        "inventoryStatus": "STOCK_IN",
+        "previousCheckpointKey": "AC + AC Unit",
+        "additionalEstimatePDI": false,
+        "checkpoints": {
+            "AC + AC Unit": {
+                "choices": [
+                    {
+                        "choice": "Rear defogger not working",
+                        "info": "Only if available in the Varient",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "YELLOW",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Replace Heater Core",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "f789b929-df64-43b2-b657-5d5f9546326a.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/AC%20%2B%20AC%20Unit/f789b929-df64-43b2-b657-5d5f9546326a.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:08.862+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "comment": "",
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:08.862+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "choices": [
+                    {
+                        "choice": "Glass broken",
+                        "info": "Major broken",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "RED",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Repair Wiring",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "7e2b2ed7-cd13-4f02-ad9c-e8a3ae16a494.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Electrical%20%2B%20Interior%20%2B%20Feature%20%2B%20Instrument%20Cluster/7e2b2ed7-cd13-4f02-ad9c-e8a3ae16a494.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:05.691+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    {
+                        "choice": [
+                            "10"
+                        ],
+                        "key": "odometerReading"
+                    }
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:05.691+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Engine + Transmission + Engine Oil": {
+                "choices": [
+                    
+                ],
+                "noImperfectionChoices": [
+                    "OK / No Imperfection"
+                ],
+                "refurbishmentChoices": [
+                    
+                ],
+                "images": [
+                    {
+                        "label": "a68b6577-60af-418e-a96a-f29025dabbb4.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/qa/inspection/IN_CAR_10075171689/CATALOG/Engine%20%2B%20Transmission%20%2B%20Engine%20Oil/a68b6577-60af-418e-a96a-f29025dabbb4.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:04.652+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": true,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:04.652+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "NO_IMPERFECTION"
+            },
+            "Exterior + Tyres + Door + RHS Rear": {
+                "choices": [
+                    {
+                        "choice": "Door Handle-Faded",
+                        "info": "Need to check severity",
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "GREEN",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    },
+                    {
+                        "choice": "Quarter Glass-Dark Glass Film on windows",
+                        "info": null,
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "YELLOW",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Replace Door",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "c25cd279-c305-433b-b50a-6c628261accd.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Exterior%20%2B%20Tyres%20%2B%20Door%20%2B%20RHS%20Rear/c25cd279-c305-433b-b50a-6c628261accd.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:06.785+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:06.785+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            },
+            "Exterior + Tyres + Windshield + Front": {
+                "choices": [
+                    {
+                        "choice": "Wiper arm not working or missing/Wiper Rubber Major Broken",
+                        "info": null,
+                        "acceptable": false,
+                        "other": false,
+                        "tag": "RED",
+                        "diagnostic": false,
+                        "disabled": false,
+                        "imperfectionType": "UN_ACCEPTABLE"
+                    }
+                ],
+                "noImperfectionChoices": [
+                    
+                ],
+                "refurbishmentChoices": [
+                    {
+                        "refurbishment": "Lubrication",
+                        "other": false,
+                        "tag": null,
+                        "disabled": false
+                    }
+                ],
+                "images": [
+                    {
+                        "label": "c66ded5a-2e06-4cdd-ac5b-e725a7f21587.jpg",
+                        "path": "https://c24-inspections.s3.ap-south-1.amazonaws.com/stage/inspection/IN_CAR_10075171793/CATALOG/Exterior%20%2B%20Tyres%20%2B%20Windshield%20%2B%20Front/c66ded5a-2e06-4cdd-ac5b-e725a7f21587.jpg.jpg",
+                        "uploadedAt": "2025-04-08T06:32:07.800+00:00",
+                        "edit": true,
+                        "updated": false
+                    }
+                ],
+                "videos": [
+                    
+                ],
+                "purchaseConditions": [
+                    
+                ],
+                "additionalInfo": [
+                    
+                ],
+                "ok": false,
+                "prepopulated": false,
+                "additional": false,
+                "skipped": false,
+                "revision": 1,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:07.800+00:00",
+                "refurbSegment": "IN_HOUSE",
+                "powEnabled": true,
+                "maxImperfectionType": "UN_ACCEPTABLE"
+            }
+        },
+        "diagnosticEstimates": {
+            
+        },
+        "diagnosticQualityChecks": {
+            "AC + AC Unit": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "NONE",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "NONE",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            }
+        },
+        "assessmentQualityChecks": {
+            
+        },
+        "estimates": {
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "labourCost": 0.0,
+                "repaintCost": 0.0,
+                "approvedLabourCost": 0.0,
+                "approvedRepaintCost": 0.0,
+                "parts": [
+                    {
+                        "category": "Alternator",
+                        "mappingId": 632,
+                        "name": "Alternator Assembly",
+                        "cost": 100.0,
+                        "approvedCost": 100.0,
+                        "make": null,
+                        "labourCost": 500.0,
+                        "approvedLabourCost": 500.0,
+                        "available": true,
+                        "tat": 0,
+                        "partNumber": null,
+                        "serialNumber": null,
+                        "comment": null,
+                        "action": null,
+                        "status": "APPROVED",
+                        "quantity": 1.0,
+                        "removed": false,
+                        "old": false,
+                        "inspectionId": "634594440123516"
+                    }
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:10.531+00:00",
+                "tat": 0,
+                "inspectionId": "634594440123516"
+            },
+            "Exterior + Tyres + Door + RHS Rear": {
+                "labourCost": 0.0,
+                "repaintCost": 0.0,
+                "approvedLabourCost": 0.0,
+                "approvedRepaintCost": 0.0,
+                "parts": [
+                    {
+                        "category": "Door Components",
+                        "mappingId": 756,
+                        "name": "Door Trim Cap - Rear Right",
+                        "cost": 200.0,
+                        "approvedCost": 200.0,
+                        "make": null,
+                        "labourCost": 200.0,
+                        "approvedLabourCost": 200.0,
+                        "available": true,
+                        "tat": 0,
+                        "partNumber": null,
+                        "serialNumber": null,
+                        "comment": null,
+                        "action": null,
+                        "status": "APPROVED",
+                        "quantity": 1.0,
+                        "removed": false,
+                        "old": false,
+                        "inspectionId": "634594440123516"
+                    }
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:10.531+00:00",
+                "tat": 0,
+                "inspectionId": "634594440123516"
+            },
+            "Exterior + Tyres + Windshield + Front": {
+                "labourCost": 0.0,
+                "repaintCost": 0.0,
+                "approvedLabourCost": 0.0,
+                "approvedRepaintCost": 0.0,
+                "parts": [
+                    {
+                        "category": "Clutch Release Shaft",
+                        "mappingId": 493,
+                        "name": "Clutch Release Shaft",
+                        "cost": 200.0,
+                        "approvedCost": 200.0,
+                        "make": null,
+                        "labourCost": 100.0,
+                        "approvedLabourCost": 100.0,
+                        "available": false,
+                        "tat": 2,
+                        "partNumber": null,
+                        "serialNumber": null,
+                        "comment": null,
+                        "action": null,
+                        "status": "APPROVED",
+                        "quantity": 1.0,
+                        "removed": false,
+                        "old": false,
+                        "inspectionId": "634594440123516"
+                    }
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:10.531+00:00",
+                "tat": 0,
+                "inspectionId": "634594440123516"
+            },
+            "AC + AC Unit": {
+                "labourCost": 0.0,
+                "repaintCost": 0.0,
+                "approvedLabourCost": 0.0,
+                "approvedRepaintCost": 0.0,
+                "parts": [
+                    {
+                        "category": "AC compressor",
+                        "mappingId": 328,
+                        "name": "AC compressor",
+                        "cost": 100.0,
+                        "approvedCost": 0.0,
+                        "make": null,
+                        "labourCost": 200.0,
+                        "approvedLabourCost": 0.0,
+                        "available": true,
+                        "tat": 0,
+                        "partNumber": null,
+                        "serialNumber": null,
+                        "comment": null,
+                        "action": null,
+                        "status": "NO_WORK",
+                        "quantity": 1.0,
+                        "removed": false,
+                        "old": false,
+                        "inspectionId": null
+                    }
+                ],
+                "revision": 0,
+                "invalidated": false,
+                "updatedBy": {
+                    "uid": "wsm.sc@cars24.com",
+                    "authType": "USER"
+                },
+                "updatedAt": "2025-04-08T06:32:10.531+00:00",
+                "tat": 0,
+                "inspectionId": "634594440123516"
+            }
+        },
+        "qualityChecks": {
+            "AC + AC Unit": {
+                "status": "APPROVED",
+                "reason": "NO_WORK_TO_BE_DONE",
+                "tag": "YELLOW",
+                "images": [
+                    
+                ],
+                "revision": 2,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "NO_WORK_TO_BE_DONE",
+                "automationTag": "YELLOW",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Electrical + Interior + Feature + Instrument Cluster": {
+                "status": "APPROVED",
+                "reason": "OK",
+                "tag": "RED",
+                "images": [
+                    
+                ],
+                "revision": 2,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "RED",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Engine + Transmission + Engine Oil": {
+                "status": "NO_ACTION",
+                "reason": "OK",
+                "tag": "GREEN",
+                "images": [
+                    
+                ],
+                "revision": 1,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "GREEN",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Exterior + Tyres + Door + RHS Rear": {
+                "status": "APPROVED",
+                "reason": "OK",
+                "tag": "YELLOW",
+                "images": [
+                    
+                ],
+                "revision": 2,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "YELLOW",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            },
+            "Exterior + Tyres + Windshield + Front": {
+                "status": "APPROVED",
+                "reason": "OK",
+                "tag": "RED",
+                "images": [
+                    
+                ],
+                "revision": 2,
+                "invalidated": false,
+                "updateAllowed": false,
+                "automationReason": "OK",
+                "automationTag": "RED",
+                "assessmentDiagnosticsStatus": "DGN_EMPTY"
+            }
+        },
+        "submittedSuperCategories": {
+            
+        },
+        "superCategoryStatusHolder": {
+            
+        },
+        "basicDetails": {
+            
+        },
+        "looseItems": {
+            
+        },
+        "warrantyDetails": {
+            
+        },
+        "sfCheckpointDetails": {
+            
+        },
+        "attachmentDetails": {
+            
+        },
+        "checklistDetails": {
+            
+        },
+        "specsFeaturesDetails": {
+            
+        },
+        "submittedActions": [
+            
+        ]
+    },
+    "version": 0,
+    "archived": "0",
+    "inspectionStatus": "ESTIMATED",
+    "inspectionType": "CATALOG",
+    "inspectionSubType": "FULL",
+    "poolType": "OK",
+    "inspectedBy": {
+        "uid": "wsm.sc@cars24.com",
+        "authType": "USER"
+    },
+    "inspectedAt": "2025-04-08T06:29:03.395+00:00",
+    "invalidated": false,
+    "skipEstimates": false,
+    "skipInspection": false,
+    "stage": 0,
+    "assigned": false,
+    "qualityRejected": false,
+    "assessmentApproved": false,
+    "diagnosticCompleted": true,
+    "reviewType": "NONE",
+    "negoCount": 0,
+    "attributes": {
+        "INSPECTION_NUMBER": 1,
+        "INSPECTION_TAG": "PI",
+        "REFURB_TYPE": "REFURB"
+    },
+    "automationEnabledSchema": false,
+    "indirectCost": 0.0,
+    "flowType": "PAYMENT_FLOW",
+    "allowed": true,
+    "ownerNumber": 1,
+    "loc": {
+        "name": "CARS24- Automovill Technologies Private Limited, Ahmedabad"
+    }
+}
         </td>
       </tr>
   </tbody>
@@ -182,19 +3609,19 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Apr 3, 2025 12:21:08 pm</h3>
+<h3>Apr 8, 2025 12:02:03 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Apr 3, 2025 12:21:12 pm</h3>
+<h3>Apr 8, 2025 12:02:11 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>2</h3>
+<h3>7</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -217,7 +3644,7 @@
 </div>
 <div class="card-footer">
 <div><small data-tooltip='100%'>
-<b>2</b> tests passed
+<b>7</b> tests passed
 </small>
 </div>
 <div>
@@ -239,10 +3666,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>4</b> events passed</small></div>
+<div><small data-tooltip='68%'><b>13</b> events passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>0</b> others
+<b data-tooltip='%'>6</b> others
 </small>
 </div>
 </div>
@@ -258,7 +3685,7 @@
 </div></div>
 <script>
 var timeline = {
-"Validate Inspection Submission - CATALOG With Imperfection":1.553,"Validate Inspection Submission - CATALOG With Imperfection":1.072
+"Validate Inspection - CATALOG With No Imperfection":0.038,"Validate Inspection - CATALOG With Imperfection":0.018,"Validate Inspection - CATALOG With Imperfection":0.012,"Validate Inspection - CATALOG With Imperfection":0.01,"Validate Inspection - CATALOG With Imperfection":0.01,"Check Inspection Status":0.179,"Validate Estimation - CATALOG for Estimation":0.014
 };
 </script>
 <div class="row">
@@ -289,7 +3716,7 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 2,
+passParent: 7,
 failParent: 0,
 warningParent: 0,
 skipParent: 0,
@@ -306,11 +3733,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 4,
+passEvents: 13,
 failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 0
+infoEvents: 6
 };
 </script>        </div>
       </div>

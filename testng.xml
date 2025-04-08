@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="MySuite">
+    <test name="MyTest">
+        <!-- Define parameters here -->
+        <parameter name="" value=""/>
+        <classes>
+            <class name="RefurbApiTest">
+                <methods>
+                    <!-- Include specific methods if needed -->
+                    <include name="validateInspectionSubmission"/>
+                    <include name="checkInspected"/>
+                    <include name="validateEstimationSubmission"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
