@@ -30,7 +30,51 @@ public class DataProviders {
         List<Object[]> data = new ArrayList<>();
 
         for (String json : catalogData) {
-                data.add(new Object[]{"CATALOG for Estimation", json});
+                data.add(new Object[]{"CATALOG Estimation", json});
+        }
+        return data.toArray(new Object[0][]);
+    }
+    @DataProvider(name = "payloadApproveEstimationProvider")
+    public static Object[][] payloadApproveEstimationProvider() {
+        List<String> catalogData = MongoUtils.getJSONRequests("inspectionType", "CATALOG", ConfigReader.get("Refurb_Approve_Estimation_Stage"));
+        List<Object[]> data = new ArrayList<>();
+
+        for (String json : catalogData) {
+            data.add(new Object[]{"Refurb_Approve_Estimation API", json});
+        }
+        return data.toArray(new Object[0][]);
+    }
+
+    @DataProvider(name = "Refurb_Reject_And_Approve_Estimation")
+    public static Object[][] rejectApproveEstimationFlow()
+    {
+        List<String> catalogData = MongoUtils.getJSONRequests("inspectionType", "CATALOG", ConfigReader.get("Refurb_Reject_And_Approve_Estimation"));
+        List<Object[]> data = new ArrayList<>();
+
+        for (String json : catalogData) {
+            data.add(new Object[]{"Refurb_Reject_And_Approve_Estimation API", json});
+        }
+        return data.toArray(new Object[0][]);
+    }
+    @DataProvider(name = "Submit_Estimation_CATApproval_Stage")
+    public static Object[][] submitEstimationCATPanel()
+    {
+        List<String> catalogData = MongoUtils.getJSONRequests("inspectionType", "CATALOG", ConfigReader.get("Refurb_Submit_Estimation_CATApproval_Stage"));
+        List<Object[]> data = new ArrayList<>();
+
+        for (String json : catalogData) {
+            data.add(new Object[]{"Submit Estimation CAT API", json});
+        }
+        return data.toArray(new Object[0][]);
+    }
+    @DataProvider(name = "submitRejectedEstimation")
+    public static Object[][] submitRejectedEstimation()
+    {
+        List<String> catalogData = MongoUtils.getJSONRequests("inspectionType", "CATALOG", ConfigReader.get("Refurb_RejectedEstimate_Submit"));
+        List<Object[]> data = new ArrayList<>();
+
+        for (String json : catalogData) {
+            data.add(new Object[]{"Submit Estimation CAT API", json});
         }
         return data.toArray(new Object[0][]);
     }

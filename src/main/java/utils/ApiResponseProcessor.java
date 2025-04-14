@@ -1,6 +1,5 @@
 package utils;
 
-import apis.InspectionApi;
 import io.restassured.response.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,23 +11,21 @@ public class ApiResponseProcessor {
 
     private static final Logger log = LoggerFactory.getLogger(ApiResponseProcessor.class);
 
-    public static void processApiResponse(String payloadType, String payload, String testType, String applicationId, InspectionApi inspectionApi, Response response) {
-        ExtentTest extentTest = ReportManager.createTest("Validate " + testType + " - " + payloadType);
+    public static void processApiResponse(String payloadType, String payload, String testStage, Response response) {
+        ExtentTest extentTest = ReportManager.createTest("Validate " + testStage + " - " + payloadType);
 
         try {
-            log.info("{} API Payload: {}", testType, payload);
-
-            String responseBody = response.asPrettyString(); // Handle the response passed from the test
-            log.info("{} API Response: {}", testType, responseBody);
+            log.info("{} API Payload: {}", testStage, payload);
+            log.info("{} API Response: {}", testStage, response.asPrettyString());
 
             Assert.assertEquals(response.statusCode(), 200, "Expected HTTP status code 200.");
-            extentTest.pass(String.format("%s API call successful for payload type: %s", testType, payloadType));
+            extentTest.pass(testStage + " API call successful for payload type: " + payloadType);
             extentTest.pass("Response Status Code: " + response.statusCode());
-            extentTest.info("Response Body: " + response.prettyPrint());
+            extentTest.info("Response Body: " + response.asPrettyString());
 
         } catch (Exception e) {
-            log.error("{} API call failed for payload type: {}", testType, payloadType, e);
-            extentTest.fail(String.format("%s API call failed for payload type: %s", testType, payloadType));
+            log.error("{} API call failed for payload type: {}", testStage, payloadType, e);
+            extentTest.fail(testStage + " API call failed for payload type: " + payloadType);
             extentTest.fail("Exception: " + e.getMessage());
             throw e;
         }

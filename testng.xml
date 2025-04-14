@@ -8,8 +8,14 @@
                 <methods>
                     <!-- Include specific methods if needed -->
                     <include name="validateInspectionSubmission"/>
-                    <include name="checkInspected"/>
+                    <include name="validateInspectionStatusIsInspected"/>
                     <include name="validateEstimationSubmission"/>
+                    <include name="validateAssignCatalogApi"/>
+                    <include name="validateEstimationRejectionFlow"/>
+                    <include name="submitEstimationCat"/>
+                    <include name="submitRejectEstimation"/>
+                    <include name="validateEstimationApprovalFlow"/>
+                    <include name="submitEstimationCat"/>
                 </methods>
             </class>
         </classes>

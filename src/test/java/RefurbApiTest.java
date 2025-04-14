@@ -1,56 +1,79 @@
-import apis.InspectionApi;
-import com.aventstack.extentreports.ExtentTest;
-import config.ConfigReader;
+
 import io.restassured.response.Response;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
 import reporting.ReportManager;
 import utils.ApiResponseProcessor;
 
-public class RefurbApiTest {
+import java.util.HashMap;
 
-    private static Response response = null;
+public class RefurbApiTest extends BaseTest {
+
     private static final Logger log = LoggerFactory.getLogger(RefurbApiTest.class);
+    private Response response;
 
-    private static final String applicationId = ConfigReader.get("applicationId");
-    private InspectionApi inspectionApi; // Declare InspectionApi as an instance variable
-
-    @BeforeClass
-    public void setup() {
-        ReportManager.initializeReport(); // Initialize Extent Report
-        inspectionApi = new InspectionApi(); // Initialize the InspectionApi object
-    }
-
-    @Test(priority = 0, dataProvider = "provideInspectionPayloads", dataProviderClass = utils.DataProviders.class)
+    @Test(dataProvider = "provideInspectionPayloads", dataProviderClass = utils.DataProviders.class)
     public void validateInspectionSubmission(String payloadType, String payload) {
-        response = inspectionApi.submitInspection(applicationId, payload); // Moved here
-        ApiResponseProcessor.processApiResponse(payloadType, payload, "Inspection", applicationId, inspectionApi, response);
+        response = inspectionApi.submitInspection(applicationId, payload);
+        ApiResponseProcessor.processApiResponse(payloadType, payload, "Inspection", response);
     }
 
-    @Test(priority = 1)
-    public void checkInspected() {
-        ExtentTest extentTest = ReportManager.createTest("Check Inspection Status");
+    @Test
+    public void validateInspectionStatusIsInspected() {
+        var extentTest = ReportManager.createTest("Validate Derived Status - INSPECTED");
         try {
-            String derivedStatus = response.body().jsonPath().getString("data.derivedStatus");
-            Assert.assertEquals(derivedStatus, "INSPECTED", "Derived status should be 'INSPECTED'.");
-            extentTest.pass("Inspection status is 'INSPECTED'.");
+            String status = response.jsonPath().getString("data.derivedStatus");
+            Assert.assertEquals(status, "INSPECTED", "Expected derivedStatus to be 'INSPECTED'");
+            extentTest.pass("Derived status is 'INSPECTED'");
         } catch (Exception e) {
-            log.error("Error during inspection status check: ", e);
-            extentTest.fail("Error during inspection status check: " + e.getMessage());
+            log.error("Error validating derived status: ", e);
+            extentTest.fail("Error validating derived status: " + e.getMessage());
             throw e;
         }
     }
 
-    @Test(priority = 2, dataProvider = "payloadEstimationProvider", dataProviderClass = utils.DataProviders.class)
+    @Test(dataProvider = "payloadEstimationProvider", dataProviderClass = utils.DataProviders.class)
     public void validateEstimationSubmission(String payloadType, String payload) {
-        response = inspectionApi.submitInspection(applicationId, payload); // Moved here
-        ApiResponseProcessor.processApiResponse(payloadType, payload, "Estimation", applicationId, inspectionApi, response);
+        response = inspectionApi.submitInspection(applicationId, payload);
+        ApiResponseProcessor.processApiResponse(payloadType, payload, "Estimation", response);
     }
 
-    @AfterClass
-    public void tearDownReport() {
-        ReportManager.finalizeReport();
+    @Test
+    public void validateAssignCatalogApi() {
+        HashMap<String, String> payloadMap = new HashMap<>();
+        payloadMap.put("appointmentId", applicationId);
+        payloadMap.put("inspectionType", "CATALOG");
+
+        String payload = new JSONObject(payloadMap).toString();
+        response = assignCatalogApi.submitAssignCatalog(applicationId, payload);
+
+        ApiResponseProcessor.processApiResponse("Assign Catalog", payload, "Estimation", response);
+    }
+
+    @Test(dataProvider = "Refurb_Reject_And_Approve_Estimation", dataProviderClass = utils.DataProviders.class)
+    public void validateEstimationRejectionFlow(String payloadType, String payload) {
+        response = estimationRejectFlowApi.submitEstimationRejectFlowApi(applicationId, payload);
+        ApiResponseProcessor.processApiResponse(payloadType, payload, "Estimation Reject", response);
+    }
+
+    @Test(dataProvider = "Submit_Estimation_CATApproval_Stage", dataProviderClass = utils.DataProviders.class)
+    public void submitEstimationCat(String payloadType, String payload) {
+        response = submitEstimateApproveReject.submitApproveEstimationApi(applicationId, payload);
+        ApiResponseProcessor.processApiResponse(payloadType, payload, "Estimation Approval", response);
+    }
+
+    @Test(dataProvider = "submitRejectedEstimation", dataProviderClass = utils.DataProviders.class)
+    public void submitRejectEstimation(String payloadType, String payload) {
+        response = estimationRejectFlowApi.submitRejectEstimation(applicationId, payload);
+        ApiResponseProcessor.processApiResponse(payloadType, payload, "Estimation Approval", response);
+    }
+
+    @Test(dataProvider = "payloadApproveEstimationProvider", dataProviderClass = utils.DataProviders.class)
+    public void validateEstimationApprovalFlow(String payloadType, String payload) {
+        response = approveEstimationApi.submitApproveEstimationApi(applicationId, payload);
+        ApiResponseProcessor.processApiResponse(payloadType, payload, "Estimation Approval", response);
     }
 }
