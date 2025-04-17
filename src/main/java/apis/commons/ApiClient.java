@@ -1,4 +1,4 @@
-package apis;
+package apis.commons;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

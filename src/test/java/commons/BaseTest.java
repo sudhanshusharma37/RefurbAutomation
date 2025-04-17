@@ -1,4 +1,6 @@
-import apis.*;
+package commons;
+
+import apis.piFlow.*;
 import config.ConfigReader;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;

@@ -1,11 +1,11 @@
-package apis;
+package apis.piFlow;
 
+import apis.commons.ApiClient;
 import config.ConfigReader;
 import io.restassured.response.Response;
 import utils.Headers;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class QualityChecksListApi {
     private final ApiClient apiClient;

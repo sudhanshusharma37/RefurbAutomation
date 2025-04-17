@@ -1,19 +1,16 @@
-package apis;
+package apis.piFlow;
 
+import apis.commons.ApiClient;
 import config.ConfigReader;
 import io.restassured.response.Response;
 import utils.Headers;
 
 import java.util.Map;
 
-public class ApproveEstimationApi {
+public class SubmitEstimateApproveReject {
     private final ApiClient apiClient;
     private final Map<String, String> commonHeaders;
-
-
-
-    // Constructing our API
-    public ApproveEstimationApi() {
+    public SubmitEstimateApproveReject() {
         apiClient = new ApiClient(ConfigReader.getApiBaseUrl("gatewayApi"));
         commonHeaders = Headers.ApproveEstimationApiHeader();
     }
@@ -21,6 +18,5 @@ public class ApproveEstimationApi {
     // Calling and Capturing response from our API
     public Response submitApproveEstimationApi(String inspectionId, String payload) {
         return apiClient.post("/inspection/" + inspectionId+"?lang=en", commonHeaders, payload);
-
     }
 }
