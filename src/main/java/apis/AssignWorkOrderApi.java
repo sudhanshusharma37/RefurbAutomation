@@ -6,21 +6,19 @@ import utils.Headers;
 
 import java.util.Map;
 
-public class ApproveEstimationApi {
+public class AssignWorkOrderApi {
+
     private final ApiClient apiClient;
     private final Map<String, String> commonHeaders;
 
-
-
     // Constructing our API
-    public ApproveEstimationApi() {
+    public AssignWorkOrderApi() {
         apiClient = new ApiClient(ConfigReader.getApiBaseUrl("gatewayApi"));
-        commonHeaders = Headers.ApproveEstimationApiHeader();
+        commonHeaders = Headers.ApproveEstimationApiHeader();  //same headers needed for this api as ApproveEstimationApiHeader
     }
 
     // Calling and Capturing response from our API
-    public Response submitApproveEstimationApi(String inspectionId, String payload) {
-        return apiClient.post("/inspection/" + inspectionId+"?lang=en", commonHeaders, payload);
-
+    public Response submitWorkOrderAssign(String inspectionId, String payload) {
+        return apiClient.put("/work-order/assign/" + inspectionId+"?lang=en", commonHeaders, payload);
     }
 }

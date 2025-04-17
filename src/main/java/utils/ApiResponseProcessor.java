@@ -1,6 +1,7 @@
 package utils;
 
 import io.restassured.response.Response;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -17,6 +18,10 @@ public class ApiResponseProcessor {
         try {
             log.info("{} API Payload: {}", testStage, payload);
             log.info("{} API Response: {}", testStage, response.asPrettyString());
+            if(response.asString().isEmpty())
+            {
+                log.info("ok");
+            }
 
             Assert.assertEquals(response.statusCode(), 200, "Expected HTTP status code 200.");
             extentTest.pass(testStage + " API call successful for payload type: " + payloadType);

@@ -7,9 +7,9 @@ import java.util.HashMap;
 public class Headers {
     public static String authToken = ConfigReader.get("authToken");
     public static String authTokenCatalogPanel = ConfigReader.get("authTokenCatalogPanel");
-    public static HashMap<String,Object> InspectionApiHeader()
+    public static HashMap<String,String> InspectionApiHeader()
     {
-        HashMap<String,Object> headers = new HashMap<>();
+        HashMap<String,String> headers = new HashMap<>();
         headers.put("Accept","application/json");
         headers.put("Content-Type","application/json");
         headers.put("X_VEHICLE_TYPE","CAR");
@@ -18,9 +18,9 @@ public class Headers {
 
         return headers;
     }
-    public static HashMap<String,Object> ApproveEstimationApiHeader()
+    public static HashMap<String,String> ApproveEstimationApiHeader()
     {
-        HashMap<String,Object> headers = new HashMap<>();
+        HashMap<String,String> headers = new HashMap<>();
         headers.put("accept", "application/json, text/plain, */*");
         headers.put("authorization", authTokenCatalogPanel);
         headers.put("content-type", "application/json");

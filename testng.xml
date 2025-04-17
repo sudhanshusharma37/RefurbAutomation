@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="MySuite">
+<suite name="MySuite" preserve-order="true">
     <test name="MyTest">
         <!-- Define parameters here -->
         <parameter name="" value=""/>
@@ -15,9 +15,16 @@
                     <include name="submitEstimationCat"/>
                     <include name="submitRejectEstimation"/>
                     <include name="validateEstimationApprovalFlow"/>
-                    <include name="submitEstimationCat"/>
+                    <include name="submitWorkProofFromAndroid"/>
+                    <include name="validateAssignWorkOrder"/>
+                    <include name="validateRejectWorkOrderCAT"/>
+                    <include name="resubmitWorkProofFromAndroid"/>
+                    <include name="validateApproveWorkOrderCAT"/>
+                    <include name="acceptPerfoma"/>
                 </methods>
             </class>
         </classes>
     </test>
 </suite>
+
+

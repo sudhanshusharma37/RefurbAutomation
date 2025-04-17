@@ -1,11 +1,13 @@
 package utils;
 
 import com.mongodb.client.*;
+import config.ConfigReader;
 import org.bson.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MongoUtils {
@@ -23,9 +25,15 @@ public class MongoUtils {
         try {
             mongoClient = MongoClients.create(CONNECTION_STRING);
             MongoDatabase database = mongoClient.getDatabase("b2c-be-automation-in");
-
             MongoCollection<Document> collection = database.getCollection(collectionName);
-            FindIterable<Document> documents = collection.find(new Document(key, value));
+
+            FindIterable<Document> documents;
+            if (value.contains(",")) {
+                List<String> values = Arrays.asList(value.split(","));
+                documents = collection.find(new Document(key, new Document("$in", values)));
+            } else {
+                documents = collection.find(new Document(key, value));
+            }
 
             for (Document doc : documents) {
                 jsonResponses.add(doc.toJson());
@@ -78,5 +86,4 @@ public class MongoUtils {
 
         return jsonResponses;
     }
-
 }

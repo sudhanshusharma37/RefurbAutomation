@@ -14,14 +14,14 @@ public class EstimationRejectFlowApi {
 
     private static final Logger log = LoggerFactory.getLogger(EstimationRejectFlowApi.class);
     private final ApiClient apiClient;
-    private final Map<String, Object> commonHeaders;
+    private final Map<String, String> commonHeaders;
     private final InspectionApi inspectionApi = new InspectionApi();
     private static String payload = "";
     private static String inspectionId = "";
 
     // Constructor to initialize API client and headers
     public EstimationRejectFlowApi() {
-        this.apiClient = new ApiClient(ConfigReader.getApiBaseUrl("gaetwayApi"));
+        this.apiClient = new ApiClient(ConfigReader.getApiBaseUrl("gatewayApi"));
         this.commonHeaders = Headers.ApproveEstimationApiHeader();
     }
 

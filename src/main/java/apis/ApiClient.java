@@ -32,7 +32,7 @@ public class ApiClient {
         return curl.toString();
     }
 
-    public Response post(String endpoint, Map<String, Object> headers, String payload) {
+    public Response post(String endpoint, Map<String, String> headers, String payload) {
         String curl = buildCurl("POST", endpoint, headers, payload);
         log.info("POST cURL Command: {}", curl);
 
@@ -53,7 +53,7 @@ public class ApiClient {
                 .get(endpoint);
     }
 
-    public Response put(String endpoint, Map<String, Object> headers, String payload) {
+    public Response put(String endpoint, Map<String, String> headers, String payload) {
         String curl = buildCurl("PUT", endpoint, headers, payload);
         log.info("PUT cURL Command: {}", curl);
 

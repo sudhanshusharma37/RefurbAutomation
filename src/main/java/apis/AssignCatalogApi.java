@@ -8,11 +8,11 @@ import java.util.Map;
 
 public class AssignCatalogApi {
     private final ApiClient apiClient;
-    private final Map<String, Object> commonHeaders;
+    private final Map<String, String> commonHeaders;
 
     // Constructing our API
     public AssignCatalogApi() {
-        apiClient = new ApiClient(ConfigReader.getApiBaseUrl("gaetwayApi"));
+        apiClient = new ApiClient(ConfigReader.getApiBaseUrl("gatewayApi"));
         commonHeaders = Headers.ApproveEstimationApiHeader();
     }
 

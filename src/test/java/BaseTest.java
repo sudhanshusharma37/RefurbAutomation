@@ -12,6 +12,12 @@ public class BaseTest {
     protected AssignCatalogApi assignCatalogApi;
     protected EstimationRejectFlowApi estimationRejectFlowApi;
     protected SubmitEstimateApproveReject submitEstimateApproveReject;
+    protected SubmitWorkProof submitWorkProof;
+    protected QualityChecksListApi qualityChecksListApi;
+    protected AssignWorkOrderApi assignWorkOrderApi;
+    protected RejectWorkOrder rejectWorkOrder;
+    protected ApproveWorkOrderApi approveWorkOrderApi;
+    protected AcceptPerfomaInvoice acceptPerfomaInvoice;
 
     @BeforeClass
     public void setup() {
@@ -23,6 +29,12 @@ public class BaseTest {
         assignCatalogApi = new AssignCatalogApi();
         estimationRejectFlowApi = new EstimationRejectFlowApi();
         submitEstimateApproveReject = new SubmitEstimateApproveReject();
+        submitWorkProof = new SubmitWorkProof();
+        qualityChecksListApi = new QualityChecksListApi();
+        assignWorkOrderApi = new AssignWorkOrderApi();
+        rejectWorkOrder = new RejectWorkOrder();
+        approveWorkOrderApi = new ApproveWorkOrderApi();
+        acceptPerfomaInvoice = new AcceptPerfomaInvoice();
     }
 
     @AfterClass

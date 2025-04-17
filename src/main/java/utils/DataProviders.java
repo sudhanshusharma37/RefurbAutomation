@@ -1,6 +1,7 @@
 package utils;
 
 import config.ConfigReader;
+import groovy.lang.DelegatesTo;
 import org.testng.annotations.DataProvider;
 
 import java.util.ArrayList;
@@ -75,6 +76,53 @@ public class DataProviders {
 
         for (String json : catalogData) {
             data.add(new Object[]{"Submit Estimation CAT API", json});
+        }
+        return data.toArray(new Object[0][]);
+    }
+
+    @DataProvider(name = "submitWorkProof")
+    public static Object[][] submitWorkProof()
+    {
+        List<String> catalogData = MongoUtils.getJSONRequests("action", "estimation", ConfigReader.get("Refurb_Work_Order_Submission"));
+        List<Object[]> data = new ArrayList<>();
+
+        for (String json : catalogData) {
+            data.add(new Object[]{"Submit Work Proof from Android", json});
+        }
+        return data.toArray(new Object[0][]);
+    }
+    @DataProvider(name = "Refurb_WorkOrder_Reject")
+    public static Object[][] refurb_workOrder_reject()
+    {
+        List<String> workOrderdata = MongoUtils.getJSONRequests("action", "qc,submitQc", ConfigReader.get("Refurb_Work-Order_Reject"));
+        List<Object[]> data = new ArrayList<>();
+
+        for (String json : workOrderdata) {
+            data.add(new Object[]{"Reject Work Order from CAT Panel", json});
+        }
+        return data.toArray(new Object[0][]);
+    }
+
+    @DataProvider(name = "Refurb_WorkOrder_Approve")
+    public static Object[][] refurb_workOrder_approve()
+    {
+        List<String> workOrderData = MongoUtils.getJSONRequests("action","qc,submitQc", ConfigReader.get("Refurb_WorkOrder_Approve"));
+        List<Object[]> data = new ArrayList<>();
+
+        for(String json: workOrderData)
+        {
+            data.add(new Object[]{"Approve Work Order CAT Panel",json});
+        }
+        return data.toArray(new Object[0][]);
+    }
+    @DataProvider(name = "Refurb_Performa")
+    public static Object[][] Refurb_Performa()
+    {
+        List<String> performaRequest = MongoUtils.getJSONRequests("action","accept",ConfigReader.get("Refurb_Performa"));
+        List<Object[]> data = new ArrayList<>();
+        for(String json: performaRequest)
+        {
+            data.add(new Object[]{"Accept Perfoma Invoice",json});
         }
         return data.toArray(new Object[0][]);
     }
