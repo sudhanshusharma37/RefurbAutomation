@@ -10,6 +10,7 @@ import java.util.Map;
 public class ApiClient {
     private static final Logger log = LoggerFactory.getLogger(ApiClient.class);
     private final String baseUrl;
+    private static final ThreadLocal<String> lastCurlCommand = new ThreadLocal<>();
 
     public ApiClient(String baseUrl) {
         this.baseUrl = baseUrl;
@@ -23,7 +24,10 @@ public class ApiClient {
                 .append(endpoint)
                 .append("'");
 
-        headers.forEach((key, value) -> curl.append(" -H '").append(key).append(": ").append(value).append("'"));
+        if (headers != null) {
+            headers.forEach((key, value) ->
+                    curl.append(" -H '").append(key).append(": ").append(value).append("'"));
+        }
 
         if (payload != null && !payload.isEmpty()) {
             curl.append(" -d '").append(payload.replace("'", "\\'")).append("'");
@@ -32,9 +36,14 @@ public class ApiClient {
         return curl.toString();
     }
 
+    private void logCurl(String method, String endpoint, Map<String, ?> headers, String payload) {
+        String curl = buildCurl(method, endpoint, headers, payload);
+        lastCurlCommand.set(curl);
+        log.info("cURL Command: {}", curl);
+    }
+
     public Response post(String endpoint, Map<String, String> headers, String payload) {
-        String curl = buildCurl("POST", endpoint, headers, payload);
-        log.info("POST cURL Command: {}", curl);
+        logCurl("POST", endpoint, headers, payload);
 
         return RestAssured.given()
                 .baseUri(baseUrl)
@@ -44,8 +53,7 @@ public class ApiClient {
     }
 
     public Response get(String endpoint, Map<String, String> headers) {
-        String curl = buildCurl("GET", endpoint, headers, null);
-        log.info("GET cURL Command: {}", curl);
+        logCurl("GET", endpoint, headers, null);
 
         return RestAssured.given()
                 .baseUri(baseUrl)
@@ -54,13 +62,25 @@ public class ApiClient {
     }
 
     public Response put(String endpoint, Map<String, String> headers, String payload) {
-        String curl = buildCurl("PUT", endpoint, headers, payload);
-        log.info("PUT cURL Command: {}", curl);
+        logCurl("PUT", endpoint, headers, payload);
 
         return RestAssured.given()
                 .baseUri(baseUrl)
                 .headers(headers)
                 .body(payload)
                 .put(endpoint);
+    }
+
+    public Response delete(String endpoint, Map<String, String> headers) {
+        logCurl("DELETE", endpoint, headers, null);
+
+        return RestAssured.given()
+                .baseUri(baseUrl)
+                .headers(headers)
+                .delete(endpoint);
+    }
+
+    public static String getCurl() {
+        return lastCurlCommand.get();
     }
 }

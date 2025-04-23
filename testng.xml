@@ -4,7 +4,7 @@
         <!-- Define parameters here -->
         <parameter name="" value=""/>
         <classes>
-            <class name="piFlowTest.RefurbApiTest">
+            <class name="testPackage.PIFlowTest">
                 <methods>
                     <!-- Include specific methods if needed -->
                     <include name="validateInspectionSubmission"/>
@@ -21,6 +21,15 @@
                     <include name="resubmitWorkProofFromAndroid"/>
                     <include name="validateApproveWorkOrderCAT"/>
                     <include name="acceptPerfoma"/>
+                </methods>
+            </class>
+            <class name="testPackage.PDIFlowTest">
+                <methods>
+                    <include name="validateStockIn"/>
+                    <include name="validatePDIInspectionSubmission"/>
+                    <include name="validateAssignCatalog"/>
+                    <include name="validateQaAssesmentSubmission"/>
+                    <include name="validateTagSubmission"/>
                 </methods>
             </class>
         </classes>

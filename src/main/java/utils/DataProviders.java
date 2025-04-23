@@ -2,6 +2,7 @@ package utils;
 
 import config.ConfigReader;
 import groovy.lang.DelegatesTo;
+import org.json.JSONObject;
 import org.testng.annotations.DataProvider;
 
 import java.util.ArrayList;
@@ -15,11 +16,11 @@ public class DataProviders {
 
         for (String json : catalogData) {
             if (json.contains("OK / No Imperfection")) {
-                data.add(new Object[]{"CATALOG With No Imperfection", json});
+                data.add(new Object[]{"PI - CATALOG With No Imperfection", json});
             }
             else
             {
-                data.add(new Object[]{"CATALOG With Imperfection", json});
+                data.add(new Object[]{"PI - CATALOG With Imperfection", json});
             }
         }
         return data.toArray(new Object[0][]);
@@ -31,7 +32,7 @@ public class DataProviders {
         List<Object[]> data = new ArrayList<>();
 
         for (String json : catalogData) {
-                data.add(new Object[]{"CATALOG Estimation", json});
+                data.add(new Object[]{"PI - Validate Sumbit Estimation", json});
         }
         return data.toArray(new Object[0][]);
     }
@@ -41,7 +42,7 @@ public class DataProviders {
         List<Object[]> data = new ArrayList<>();
 
         for (String json : catalogData) {
-            data.add(new Object[]{"Refurb_Approve_Estimation API", json});
+            data.add(new Object[]{"PI - Refurb_Approve_Estimation API", json});
         }
         return data.toArray(new Object[0][]);
     }
@@ -53,7 +54,7 @@ public class DataProviders {
         List<Object[]> data = new ArrayList<>();
 
         for (String json : catalogData) {
-            data.add(new Object[]{"Refurb_Reject_And_Approve_Estimation API", json});
+            data.add(new Object[]{"PI - Refurb_Reject_And_Approve_Estimation API", json});
         }
         return data.toArray(new Object[0][]);
     }
@@ -64,7 +65,7 @@ public class DataProviders {
         List<Object[]> data = new ArrayList<>();
 
         for (String json : catalogData) {
-            data.add(new Object[]{"Submit Estimation CAT API", json});
+            data.add(new Object[]{"PI - Submit Estimation CAT API", json});
         }
         return data.toArray(new Object[0][]);
     }
@@ -75,7 +76,7 @@ public class DataProviders {
         List<Object[]> data = new ArrayList<>();
 
         for (String json : catalogData) {
-            data.add(new Object[]{"Submit Estimation CAT API", json});
+            data.add(new Object[]{"PI - Submit Estimation CAT API", json});
         }
         return data.toArray(new Object[0][]);
     }
@@ -87,7 +88,7 @@ public class DataProviders {
         List<Object[]> data = new ArrayList<>();
 
         for (String json : catalogData) {
-            data.add(new Object[]{"Submit Work Proof from Android", json});
+            data.add(new Object[]{"PI - Submit Work Proof from Android", json});
         }
         return data.toArray(new Object[0][]);
     }
@@ -98,7 +99,7 @@ public class DataProviders {
         List<Object[]> data = new ArrayList<>();
 
         for (String json : workOrderdata) {
-            data.add(new Object[]{"Reject Work Order from CAT Panel", json});
+            data.add(new Object[]{"PI - Reject Work Order from CAT Panel", json});
         }
         return data.toArray(new Object[0][]);
     }
@@ -111,18 +112,79 @@ public class DataProviders {
 
         for(String json: workOrderData)
         {
-            data.add(new Object[]{"Approve Work Order CAT Panel",json});
+            data.add(new Object[]{"PI - Approve Work Order CAT Panel",json});
         }
         return data.toArray(new Object[0][]);
     }
     @DataProvider(name = "Refurb_Performa")
-    public static Object[][] Refurb_Performa()
+    public static Object[][] refurb_Performa()
     {
         List<String> performaRequest = MongoUtils.getJSONRequests("action","accept",ConfigReader.get("Refurb_Performa"));
         List<Object[]> data = new ArrayList<>();
         for(String json: performaRequest)
         {
-            data.add(new Object[]{"Accept Perfoma Invoice",json});
+            data.add(new Object[]{"PDI - Accept Perfoma Invoice",json});
+        }
+        return data.toArray(new Object[0][]);
+    }
+    @DataProvider(name = "Refurb_PDI_StockIn")
+    public Object[][] refurb_PDI_StockIn()
+    {
+        List<String> pdiCheckInRequest = MongoUtils.getJSONRequests("inspectionType","CATALOG",ConfigReader.get("Refurb_PDI_StockIn"));
+        List<Object[]> data = new ArrayList<>();
+        for(String json: pdiCheckInRequest)
+        {
+            data.add(new Object[]{"PDI - PDI Stocked-In",json});
+        }
+        return data.toArray(new Object[0][]);
+    }
+    @DataProvider(name = "Refurb_PDI_Inspection")
+    public Object[][] refurb_PDI_Inspection()
+    {
+        List<String> pdiInspectionRequest = MongoUtils.getJSONRequests("inspectionType","CATALOG",ConfigReader.get("Refurb_PDI_Inspection"));
+        List<Object[]> data = new ArrayList<>();
+        for(String json:pdiInspectionRequest)
+        {
+            data.add(new Object[]{"PDI - Inspection requests",json});
+        }
+        return data.toArray(new Object[0][]);
+    }
+    @DataProvider(name = "Refurb_Assign_Catalog")
+    public Object[][] refurb_Assign_Catalog()
+    {
+        List<String> pdiInspectionRequest = MongoUtils.getJSONRequests("inspectionType","CATALOG",ConfigReader.get("Refurb_Assign_Catalog"));
+        List<Object[]> data = new ArrayList<>();
+        for(String json:pdiInspectionRequest)
+        {
+            data.add(new Object[]{"PDI - Inspection requests",json});
+        }
+        return data.toArray(new Object[0][]);
+    }
+    @DataProvider(name = "Refurb_PDI_SubmitQA")
+    public Object[][] refurb_PDI_SubmitQA()
+    {
+        List<String> appointmentRequests = MongoUtils.getJSONRequests("inspectionType", "CATALOG", ConfigReader.get("Refurb_PDI_SubmitQA"));
+        List<Object[]> data = new ArrayList<>();
+
+        String newAppointmentId = ConfigReader.get("applicationId");
+        for (String json : appointmentRequests) {
+            JSONObject jsonObject = new JSONObject(json);
+            jsonObject.put("appointmentId", newAppointmentId);
+            data.add(new Object[] { "PDI - PDI Appointment Updated", jsonObject.toString() });
+        }
+        return data.toArray(new Object[0][]);
+    }
+    @DataProvider(name = "Refurb_PDI_Tag")
+    public Object[][] refurb_PDI_Tag() {
+        List<String> tagRequests = MongoUtils.getJSONRequests("inspectionType", "CATALOG", ConfigReader.get("Refurb_PDI_Tag"));
+        List<Object[]> data = new ArrayList<>();
+        String tag = ConfigReader.get("giveTag").toUpperCase();
+        for (String json : tagRequests) {
+            JSONObject jsonObject = new JSONObject(json);
+            jsonObject.getJSONObject("data").put("tag", tag);
+
+            data.add(new Object[] { "PDI - PDI Tagged - " + tag, jsonObject.toString() });
+            System.out.println(data);
         }
         return data.toArray(new Object[0][]);
     }

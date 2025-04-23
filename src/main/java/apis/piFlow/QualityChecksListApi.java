@@ -17,6 +17,6 @@ public class QualityChecksListApi {
 
     // Calling and Capturing response from our API
     public Response submitQCList(String inspectionId) {
-        return apiClient.get("/work-order?appointmentId=" + inspectionId, commonHeaders);
+            return apiClient.get("/work-order?appointmentId=" + inspectionId, commonHeaders);
     }
 }

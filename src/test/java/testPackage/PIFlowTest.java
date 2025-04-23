@@ -1,4 +1,4 @@
-package piFlowTest;
+package testPackage;
 
 import io.restassured.response.Response;
 import org.bson.Document;
@@ -15,9 +15,9 @@ import commons.BaseTest;
 import java.lang.reflect.Method;
 import java.util.*;
 
-public class RefurbApiTest extends BaseTest {
+public class PIFlowTest extends BaseTest {
 
-    private static final Logger log = LoggerFactory.getLogger(RefurbApiTest.class);
+    private static final Logger log = LoggerFactory.getLogger(PIFlowTest.class);
     private Response response;
 
     @BeforeMethod
@@ -51,15 +51,9 @@ public class RefurbApiTest extends BaseTest {
         ApiResponseProcessor.processApiResponse(payloadType, payload, "Estimation", response);
     }
 
-    @Test
-    public void validateAssignCatalogApi() {
-        HashMap<String, String> payloadMap = new HashMap<>();
-        payloadMap.put("appointmentId", applicationId);
-        payloadMap.put("inspectionType", "CATALOG");
-
-        String payload = new JSONObject(payloadMap).toString();
+    @Test(dataProvider = "Refurb_Assign_Catalog", dataProviderClass = utils.DataProviders.class)
+    public void validateAssignCatalogApi(String payloaType, String payload) {
         response = assignCatalogApi.submitAssignCatalog(applicationId, payload);
-
         ApiResponseProcessor.processApiResponse("Assign Catalog", payload, "Estimation", response);
     }
 
