@@ -122,7 +122,6 @@ public class PIFlowTest extends BaseTest {
         submitWorkProofFromAndroid(payloadType, payload); // sampleWorkProofPayload must be a valid string payload
     }
 
-
     @Test
     public void validateAssignWorkOrder() {
         HashMap<String, String> payloadMap = new HashMap<>();

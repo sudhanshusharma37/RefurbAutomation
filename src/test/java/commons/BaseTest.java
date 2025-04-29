@@ -5,6 +5,7 @@ import apis.piFlow.*;
 import config.ConfigReader;
 import org.testng.annotations.*;
 import reporting.ReportManager;
+import utils.EmailUtils;
 
 public class BaseTest {
 
@@ -59,5 +60,6 @@ public class BaseTest {
     @AfterTest
     public void tearDown() {
         ReportManager.finalizeReport();
+        EmailUtils.sendReportByEmail("test-output/ExtentReport.html");
     }
 }

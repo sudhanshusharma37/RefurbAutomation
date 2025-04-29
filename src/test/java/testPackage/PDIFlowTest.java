@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 import utils.ApiResponseProcessor;
 
 import java.lang.reflect.Method;
-import java.util.HashMap;
 
 public class PDIFlowTest extends BaseTest {
     private static final Logger log = LoggerFactory.getLogger(PIFlowTest.class);
@@ -46,7 +45,7 @@ public class PDIFlowTest extends BaseTest {
     @Test(dataProvider = "Refurb_PDI_Tag", dataProviderClass = utils.DataProviders.class)
     public void validateTagSubmission(String payloadType,String payload) {
         response = taggingApi.submitTag(ConfigReader.get("applicationId"), payload);
-        ApiResponseProcessor.processApiResponse("Provide Tag", payload, "PDI", response);
+        ApiResponseProcessor.processApiResponse("Tagging and Ready_For_CheckOut Status", payload, "PDI", response);
         if(ConfigReader.get("giveTag").equals("GREEN") || ConfigReader.get("giveTag").equals("YELLOW"))
         {
             Assert.assertEquals(response.body().jsonPath().getString("data.derivedStatus"),"READY_FOR_CHECKOUT","STATUS CHECK");
