@@ -1,0 +1,111 @@
+name: triggerAutomationSuiteWorkFlow
+
+on:
+  pull_request:
+    types: [opened, synchronize]  # Trigger on PR open & update
+
+jobs:
+  trigger-automation-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger refurb-automation tests workflow
+        run: |
+          set -e
+          PAYLOAD=$(cat <<EOF
+          {
+            "event_type": "run-tests",
+            "client_payload": {
+              "pr_repo": "${{ github.repository }}",
+              "pr_number": "${{ github.event.pull_request.number }}",
+              "sha": "${{ github.event.pull_request.head.sha }}"
+            }
+          }
+          EOF
+          )
+          RESPONSE=$(curl --fail --location 'https://api.github.com/repos/CSPL-CARS24/refurb-automation/dispatches' \
+            --header 'Accept: application/vnd.github.v3+json' \
+            --header "Authorization: token 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" \
+            --header 'Content-Type: application/json' \
+            --data "$PAYLOAD") || { echo "API call failed"; echo $RESPONSE; exit 1; }
+
+  fetch-test-results:
+    runs-on: ubuntu-latest
+    needs: trigger-automation-tests
+
+    steps:
+      - name: Wait for 2 minutes and 30 seconds before fetching results
+        run: |
+          echo "Waiting for 2 minutes and 30 seconds before fetching latest workflow details..."
+          sleep 150  # 150 seconds = 2 minutes 30 seconds
+
+      - name: Get the latest workflow run ID from Repo B
+        run: |
+          LATEST_RUN_ID=$(curl -s -H "Authorization: Bearer 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" \
+            "https://api.github.com/repos/CSPL-CARS24/refurb-automation/actions/runs?per_page=1&status=completed" \
+            | jq -r '.workflow_runs[0].id')
+          echo "LATEST_RUN_ID=$LATEST_RUN_ID" >> $GITHUB_ENV
+          if [ -z "$LATEST_RUN_ID" ] || [ "$LATEST_RUN_ID" = "null" ]; then
+            echo "❌ No completed workflow runs found!"
+            exit 1
+          fi
+          echo "LATEST_RUN_ID: $LATEST_RUN_ID"
+
+      - name: Fetch artifact ID from Repo B
+        run: |
+          ARTIFACT_ID=$(curl -s -H "Authorization: Bearer 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" \
+            "https://api.github.com/repos/CSPL-CARS24/refurb-automation/actions/runs/$LATEST_RUN_ID/artifacts" \
+            | jq -r '.artifacts[0].id')
+          echo "ARTIFACT_ID=$ARTIFACT_ID" >> $GITHUB_ENV
+          if [ -z "$ARTIFACT_ID" ] || [ "$ARTIFACT_ID" = "null" ]; then
+            echo "❌ No artifacts found for workflow run ID: $LATEST_RUN_ID"
+            exit 1
+          fi
+          echo "LATEST_RUN_ID: $LATEST_RUN_ID"
+          echo "ARTIFACT_ID: $ARTIFACT_ID"
+
+      - name: Print Artifact Page URL
+        run: |
+          ARTIFACT_PAGE_URL="https://github.com/CSPL-CARS24/refurb-automation/actions/runs/$LATEST_RUN_ID/artifacts/$ARTIFACT_ID"
+          echo "Artifact Page URL: $ARTIFACT_PAGE_URL"
+
+      - name: Download artifact from Repo B
+        run: |
+          ARTIFACT_URL="https://api.github.com/repos/CSPL-CARS24/refurb-automation/actions/artifacts/$ARTIFACT_ID/zip"
+          curl -L -H "Authorization: Bearer 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" "$ARTIFACT_URL" -o artifact.zip
+
+      - name: Extract the artifact ZIP file
+        run: |
+          mkdir extracted_results
+          unzip artifact.zip -d extracted_results
+          echo "✅ Artifact extracted successfully!"
+
+      - name: Display extracted files
+        run: |
+          echo "📂 Extracted Files:"
+          ls -lh extracted_results
+
+      - name: Identify test results file
+        run: |
+          echo "🔍 Searching for test results file..."
+          TEST_RESULTS_FILE=$(ls extracted_results | grep 'test-results' | head -n 1)
+          echo "📝 Detected file: $TEST_RESULTS_FILE"
+          echo "TEST_RESULTS_FILE=$TEST_RESULTS_FILE" >> $GITHUB_ENV
+      - name: Print full content of test results log
+        run: |
+          echo "📜 Full Test Results:"
+          cat extracted_results/"$TEST_RESULTS_FILE"
+
+      - name: Analyze test results
+        run: |
+          PASSED=$(grep -oP 'Tests run: \K\d+' extracted_results/"$TEST_RESULTS_FILE" | tail -n1)
+          FAILED=$(grep -oP 'Failures: \K\d+' extracted_results/"$TEST_RESULTS_FILE" | tail -n1)
+          ERRORS=$(grep -oP 'Errors: \K\d+' extracted_results/"$TEST_RESULTS_FILE" | tail -n1)
+          SKIPPED=$(grep -oP 'Skipped: \K\d+' extracted_results/"$TEST_RESULTS_FILE" | tail -n1)
+          EXEC_TIME=$(grep -oP 'Total time:\s+\K[\d:]+' extracted_results/"$TEST_RESULTS_FILE" | tail -n1)
+
+          echo "✅ Passed: $PASSED"
+          echo "❌ Failed: $FAILED"
+          echo "🚨 Errors: $ERRORS"
+          echo "⚠️ Skipped: $SKIPPED"
+          echo "⏳ Execution Time: $EXEC_TIME minutes"
