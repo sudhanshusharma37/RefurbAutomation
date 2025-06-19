@@ -108,4 +108,4 @@ jobs:
           echo "❌ Failed: $FAILED"
           echo "🚨 Errors: $ERRORS"
           echo "⚠️ Skipped: $SKIPPED"
-          echo "⏳ Execution Time: $EXEC_TIME minutes"
+          echo "⏳ Execution Time: $EXEC_TIME minutes  "
